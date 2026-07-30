@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1A2530">
+
+    <!-- TOP GLOBAL HEADER -->
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <RelativeLayout
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#1A2530"
+            android:paddingHorizontal="20dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="O.P.S. FIT"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+    </RelativeLayout>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavBar"
+            android:layout_below="@id/headerBar"
+            android:padding="15dp">
+
+        <!-- SCREEN 1: HOME VIEW -->
+        <LinearLayout
+                android:id="@+id/homeView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <!-- Profile Header Card -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2A3644"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                <View
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#2A629A" />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:text="Cody"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/lblHeaderRank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#C5A059"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Rank: Recruit"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- XP Progress Card -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="#2A3644"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XP Metric"
+                        android:textColor="#FFFFFF" />
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="#1A2530">
+
+                    <View
+                            android:id="@+id/xpFillBar"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:background="#C5A059" />
+                </FrameLayout>
+
+                <TextView
+                        android:id="@+id/lblXpStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250 / 500 XP to Next Rank"
+                        android:textColor="#A0AEC0" />
+            </LinearLayout>
+
+            <!-- Mission Action Button -->
+            <Button
+                    android:id="@+id/btnActiveMission"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#2A3644"
+                    android:text="ACTIVE MISSION:\nCOMPLETE 1 WORKOUT TODAY"
+                    android:textColor="#C5A059"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- SCREEN 2: LOG VIEW -->
+        <LinearLayout
+                android:id="@+id/logView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Log Workout"
+                    android:textColor="#C5A059"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <Spinner
+                    android:id="@+id/comboType"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#2A3644" />
+
+            <Spinner
+                    android:id="@+id/comboExercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#2A3644" />
+
+            <EditText
+                    android:id="@+id/txtMetric1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#2A3644"
+                    android:hint="Weight (lbs) / Distance (miles)"
+                    android:inputType="numberDecimal"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0AEC0" />
+
+            <EditText
+                    android:id="@+id/txtMetric2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#2A3644"
+                    android:hint="Reps Count / Duration (mins)"
+                    android:inputType="number"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0AEC0" />
+
+            <Button
+                    android:id="@+id/btnSaveWorkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#C5A059"
+                    android:text="COMPLETE MISSION"
+                    android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- SCREEN 3: RANKS & MEDALS VIEW -->
+        <LinearLayout
+                android:id="@+id/progressView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="RANKS &amp; MEDALS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:columnCount="2"
+                    android:rowCount="2">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:background="#C5A059"
+                        android:gravity="center"
+                        android:text="RECRUIT 1\n★"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="5dp"
+                        android:background="#C5A059"
+                        android:gravity="center"
+                        android:text="RECRUIT 2\n★★"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+            </GridLayout>
+        </LinearLayout>
+
+        <!-- SCREEN 4: SQUAD LEADERBOARD VIEW -->
+        <LinearLayout
+                android:id="@+id/squadView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="RANK LEADERBOARD"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <LinearLayout
+                    android:id="@+id/vboxLeaderboardContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical" />
+        </LinearLayout>
+
+        <!-- POPUP REWARD MODAL OVERLAY -->
+        <androidx.cardview.widget.CardView
+                android:id="@+id/rewardModalOverlay"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:cardBackgroundColor="#2A3644"
+                app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MISSION COMPLETE!\n+100 XP"
+                        android:textColor="#C5A059"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/lblModalStreak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:text="FIRE STREAK: 3 DAYS"
+                        android:textColor="#FF8C00"
+                        android:textSize="16sp" />
+
+                <Button
+                        android:id="@+id/btnCloseModal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#C5A059"
+                        android:text="BACK TO DASHBOARD"
+                        android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <!-- BOTTOM NAVBAR NAVIGATION -->
+    <LinearLayout
+            android:id="@+id/bottomNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:background="#1A2530"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:text="🏠"
+                android:textSize="20sp" />
+
+        <Button
+                android:id="@+id/navLog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:text="➕"
+                android:textSize="20sp" />
+
+        <Button
+                android:id="@+id/navProgress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:text="📊"
+                android:textSize="20sp" />
+
+        <Button
+                android:id="@+id/navSquad"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:text="👥"
+                android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>
