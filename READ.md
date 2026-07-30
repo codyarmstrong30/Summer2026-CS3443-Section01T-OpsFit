@@ -5,8 +5,8 @@ O.P.S. Fit is a military-style gamified workout tracking application built for A
 
 ## Contributors
 * [Cody Armstrong]
-* [Teammate 1 Name]
-* [Teammate 2 Name]
+* [Daryl Awuku]
+* [Jacob D Campos]
 
 ## Instructions for Running the Application
 1. Clone this repository into Android Studio.
