@@ -4,7 +4,7 @@
 O.P.S. Fit is a military-style gamified workout tracking application built for Android. It allows users to log workouts (Lifting, Cardio, Bodyweight), track consistency streaks, earn XP to climb ranks, and compare progress against squad members on a live leaderboard.
 
 ## Contributors
-* [Your Name]
+* [Cody Armstrong]
 * [Teammate 1 Name]
 * [Teammate 2 Name]
 
