@@ -14,6 +14,18 @@ import edu.utsa.cs3443.group6_project.model.Workout;
 
 import java.time.LocalDate;
 
+/**
+ * MainActivity serves as the main Controller in the MVC architecture for O.P.S. Fit.
+ * It manages user interface components, navigation events, user input collection,
+ * and dynamic leaderboard rendering while delegating business logic to OpsFitManager.
+ *
+ * CS 3443 - Final Application
+ */
+
+
+
+
+
 public class MainActivity extends AppCompatActivity {
 
     private OpsFitManager manager;

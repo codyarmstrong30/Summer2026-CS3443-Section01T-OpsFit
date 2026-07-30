@@ -1,5 +1,11 @@
 package edu.utsa.cs3443.group6_project.model;
 
+
+/**
+ * Model class representing a peer squad member on the leaderboard.
+ *
+ * CS 3443 - Final Application
+ */
 public class SquadMember {
     private String name;
     private int xp;

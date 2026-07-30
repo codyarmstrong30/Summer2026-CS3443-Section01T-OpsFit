@@ -4,6 +4,16 @@ import android.content.Context;
 import java.io.*;
 import java.util.ArrayList;
 
+
+
+/**
+ * OpsFitManager acts as the central Model controller in the MVC design pattern.
+ * Manages user progress state (XP, streak), holds collection lists, and handles
+ * internal persistent storage using CSV file I/O operations.
+ *
+ * CS 3443 - Final Application
+ */
+
 public class OpsFitManager {
     private ArrayList<Workout> workoutHistory;
     private int userXp;

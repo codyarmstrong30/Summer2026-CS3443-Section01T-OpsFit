@@ -1,5 +1,12 @@
 package edu.utsa.cs3443.group6_project.model;
 
+
+/**
+ * Model class representing an individual workout event logged by the user.
+ * Encapsulates workout metrics and supports CSV data conversion.
+ *
+ * CS 3443 - Final Application
+ */
 public class Workout {
     private String date;
     private String type;
